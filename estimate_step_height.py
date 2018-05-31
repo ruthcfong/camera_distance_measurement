@@ -128,7 +128,7 @@ def transform(opts):
             'B. Bottom step (5., a leftmost point, 6., a rightmost point)\n'\
             'C. Top step (7., a leftmost point, 8., a rightmost point)\n'
         
-    clicks = get_clicks(opts.image_path, num_clicks=8, text=instructions, print_pos=True)
+    clicks = get_clicks(opts.image_path, num_clicks=8, text=instructions, print_pos=False)
 
     card_orig = Point.from_numpy(clicks[:4])
     steps_orig = Point.from_numpy(clicks[4:])
